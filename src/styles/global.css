@@ -111,3 +111,12 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(139,92,246,.18),tr
 .btn.fill{box-shadow:0 10px 30px -8px rgba(59,130,246,.6)}
 @media(max-width:700px){.hero{gap:56px;padding-top:50px}.float{font-size:.75rem;padding:6px 12px}.hero .lead{margin:0 auto}}
 @media(prefers-reduced-motion:reduce){.aurora span,.float,.shine,.pill i{animation:none}}
+/* Hero: photo beside the text on desktop */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:40px}
+.hero h1{font-size:clamp(2.2rem,4.6vw,4rem)}
+.scene{justify-self:center}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .hero .lead{margin:0 auto}
+  .btns,.social{justify-content:center}
+}
